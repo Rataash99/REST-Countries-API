@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.8rem;
+}
+:root{
+    --bg-color: hsl(207, 26%, 17%);
+    --content-color:hsl(209, 23%, 22%);
+    --font-color: white;
+    --hover-n-span: rgb(159, 158, 158);
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+h2{
+    font-size: 1.1rem;
+}
+.header{
+    /* border: 2px solid red; */
+    background-color: var(--content-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 50px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px -2px rgb(29, 29, 29);
+}
+.color-mode{
+    /* border: 2px solid yellow; */
+    align-items: center;
+    gap: 8px;
+    display:flex;
+}
+.main-content{
+    /* border: 1px solid red; */
+    width:100vw;
+    height: 83vh;
+    padding: 1.8rem 3rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.search_N_filter{
+    /* border: 1px solid yellow; */
+    padding: 22px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.searchbar{
+    /* border: 2px solid red; */
+    position: relative;
+}
+.searchbar i{
+    /* border: 2px solid red; */
+    position: absolute;
+    /* top: 3.05rem; */
+    margin: 14px 22px;
+}
+form{
+    /* border: 2px solid red; */
+    color: var(--font-color);
+    /* border:none; */
+    background-color: var(--content-color);
+    padding: 12px 20px;
+    border-radius: 3px;
+    width: 25rem;
+}
+input{
+    /* border: 2px solid yellow; */
+    color: var(--font-color);
+    border:none;
+    background-color: var(--content-color);
+    margin: 0px 30px;
+    padding: none;
+    border-radius: 3px;
+    width: 20rem;
+    outline: none;
+}
+input::placeholder{
+    /* padding-left: 10px; */
+    color: var(--font-color);
+    opacity: 0.6;
+}
+#continents{
+    /* border: 2px solid red; */
+    background-color: var(--content-color);
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    width: 12rem;
+    display: flex;
+    flex-direction: row;
+    border-radius: 3px;
+}
+i:hover {
+    cursor: pointer;
+}
+.all-continent{
+    /* border: 1px solid yellow; */
+    background-color: var(--content-color);
+    position: absolute;
+    margin-top: 16.8rem;
+    border-radius: 3px;
+    width: 12rem;
+    padding: 9px;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 4px 8px -2px rgb(29, 29, 29);
+}
+.individual-continent{
+    padding: 5px;
+    cursor: pointer;
+}
+.individual-continent:hover{
+    color: var(--hover-n-span)
+}
+.countries{
+    /* border: 2px solid yellow; */
+    margin-top: 2.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4.46rem;
+}
+.country-data{
+    /* border: 2px solid red; */
+    background-color: var(--content-color);
+    border-radius: 3px;
+    padding: 22px;
+    width: 15rem;
+    box-shadow: 0 4px 8px -2px rgb(29, 29, 29);
+}
+.flag-img{
+    /* border: 2px solid yellow; */
+    position: relative;
+    left: -22px;
+    top: -22px;
+    position: relative;
+    height: auto;
+    width: 15rem;
+}
+.country-data h3{
+    /* border: 2px solid red; */
+    padding-bottom: 1rem;
+}
+.country-data p{
+    padding: 3.4px 0px;
+}
+span{
+    color: var(--hover-n-span)
+}
+
+.display-toggle{
+    display: block;
+}
