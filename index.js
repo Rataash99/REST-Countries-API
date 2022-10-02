@@ -11,6 +11,12 @@ const search_input = document.getElementById('search-input');
 let form = document.querySelector('form');
 let main_content = document.getElementsByClassName('main-content')[0];
 let container = document.getElementsByClassName('container')[0];
+let color_mode = document.getElementsByClassName('color-mode')[0];
+let body = document.querySelector('body');
+let header = document.getElementsByClassName('header')[0];
+let input = document.querySelector('input')
+let continents = document.querySelector('#continents');
+let p_data = document.getElementsByClassName('p-data')[0];
 
 function info_of_particular_country(item) {
 
@@ -18,16 +24,17 @@ function info_of_particular_country(item) {
     let info_container = document.createElement('div');
     info_container.classList.add = 'info-of-country';
     let currencies = item.currencies[0].name;
-    // let borders = item.borders;
+    let borders = '';
+    if(item.borders){
+        let borders_arr = (item.borders);
+        borders = borders_arr.toString();
+    }
     let languages_arr = [];
     item.languages.forEach(ele => {
-        // console.log(ele.name)
         languages_arr.push(ele.name)
     })
-    let languages = ''
-    for(let item in languages_arr){
-        languages += ` ${languages_arr[item]},`
-    }
+    let languages = languages_arr.toString();
+    
     info_container.innerHTML = `
     <div class="back-button">
     <i class="fa-solid fa-arrow-left-long"></i>
@@ -53,59 +60,62 @@ function info_of_particular_country(item) {
             </div>
             <div class="border-countries">
             <p class="border-countries-data">Border Countries: </p>
-            <div class="present-borders-countries"></div>
+            <div class="present-borders-countries"><span class = 'box'>${borders}</span></div>
             </div>
             </div>
             </div>
             `
-            let p_data = document.getElementsByClassName('p-data')[0];
-            p_data.appendChild(info_container);
-            let back_button = document.getElementsByClassName('back-button')[0];
-                    console.log(back_button)
-                    back_button.addEventListener('click',() =>{
-                        remove_show(p_data)
-                        p_data.classList.toggle('display-remove');
-                    })
-        }
-function remove_show(ele){
+    p_data.appendChild(info_container);
+    let back_button = document.getElementsByClassName('back-button')[0];
+    back_button.addEventListener('click', () => {
+        remove_show(p_data);
+        p_data.classList.toggle('display-remove');
+    })
+}
+
+function remove_show(ele) {
     ele.classList.toggle('display-remove');
     clear_child(ele)
     main_content.classList.toggle('display-remove');
 }
-function border_countries(pre_bor_count, item){
-    for(let ele in item.borders) {
-        console.log(item.borders[ele]);
-        let child_element = document.createElement('div')
-        child_element.innerHTML = `<span class = 'box'>${item.borders[ele]}</span>`
-        console.log(child_element)
-        pre_bor_count.appendChild(child_element);
-    }
-}
 function append_to_list(ele) {
     let div = document.createElement('div')
     div.classList.add('country-data');
-    
+
     div.innerHTML = `<img class = 'flag-img' src=${ele.flag} alt="">
     <h3 class="country-flag">${ele.name}</h3>
     <p >Population: <span class="population">${ele.population}</span></p>
     <p >Region: <span class="region">${ele.region}</span></p>
     <p >Capital: <span class="capital">${ele.capital}</span></p>`
-    
+
     countries.appendChild(div);
+
 }
-function fetch_countries_data() {
+function country_information(res,country_data){
+    for (let ele of country_data) {
+        ele.addEventListener('click', (e) => {
+            let content = ele.children[1].textContent;
+            res.forEach(ele => {
+                if (ele.name == content) {
+                    info_of_particular_country(ele);
+                }
+            })
+        })
+    }    
+}
+    let country_data = document.getElementsByClassName('country-data');
+    console.log(country_data)
     fetch(url)
-    .then(response => response.json())
-    .then(res => {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let is_Present = false;
+        .then(response => response.json())
+        .then(res => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let is_Present = false;
                 const str = search_input.value
                 if (str !== '') {
                     const val = str[0].toUpperCase() + str.substring(1);
                     clear_child(countries);
                     res.forEach(ele => {
-                        console.log(ele)
                         if (val == ele.name) {
                             append_to_list(ele);
                             search_input.value = ''
@@ -119,6 +129,7 @@ function fetch_countries_data() {
                             append_to_list(ele);
                         }
                     })
+                    country_information(res,country_data)
                     return;
                 }
                 else if (str == '') {
@@ -126,6 +137,7 @@ function fetch_countries_data() {
                     res.forEach(ele => {
                         append_to_list(ele);
                     })
+                    country_information(res,country_data)
                     return;
                 }
             })
@@ -138,6 +150,7 @@ function fetch_countries_data() {
                             append_to_list(ele)
                         }
                     })
+            country_information(res,country_data)
                     return;
                 }
                 else if (e.target.classList.contains('africa')) {
@@ -147,6 +160,8 @@ function fetch_countries_data() {
                             append_to_list(ele)
                         }
                     })
+                    country_information(res,country_data)
+
                     return;
                 }
                 else if (e.target.classList.contains('europe')) {
@@ -156,6 +171,8 @@ function fetch_countries_data() {
                             append_to_list(ele)
                         }
                     })
+                    country_information(res,country_data)
+
                     return;
                 }
                 else if (e.target.classList.contains('americas')) {
@@ -165,6 +182,8 @@ function fetch_countries_data() {
                             append_to_list(ele)
                         }
                     })
+                    country_information(res,country_data)
+
                     return;
                 }
                 else if (e.target.classList.contains('oceania')) {
@@ -174,6 +193,8 @@ function fetch_countries_data() {
                             append_to_list(ele)
                         }
                     })
+                    country_information(res,country_data)
+
                     return;
                 }
                 else if (e.target.classList.contains('all')) {
@@ -181,6 +202,8 @@ function fetch_countries_data() {
                     res.forEach(ele => {
                         append_to_list(ele)
                     })
+                    country_information(res,country_data)
+  
                     return;
                 }
             })
@@ -189,20 +212,10 @@ function fetch_countries_data() {
                 append_to_list(ele)
             })
 
-            let country_data = document.getElementsByClassName('country-data');
-            for(let ele of country_data){
-                ele.addEventListener('click',(e) => {
-                    let content = ele.children[1].textContent;
-                    res.forEach(ele => {
-                        if(ele.name == content){
-                            info_of_particular_country(ele);
-                        }
-                    })
-                })
-            }
+            country_information(res,country_data)  
+
         })
         .catch(err => console.log(err))
-}
 
 function clear_child(class_name) {
     while (class_name.hasChildNodes()) {
@@ -213,4 +226,4 @@ function clear_child(class_name) {
 dropdown.addEventListener('click', () => {
     all_continent.classList.toggle('display-toggle')
 })
-fetch_countries_data();
+

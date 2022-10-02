@@ -33,15 +33,14 @@ h2{
     background-color: var(--content-color);
     display: flex;
     justify-content: space-between;
-    padding: 18px 50px;
+    align-items: center;
+    padding: 8px 50px;
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px -2px rgb(29, 29, 29);
 }
-.color-mode{
-    /* border: 2px solid yellow; */
-    align-items: center;
-    gap: 8px;
-    display:flex;
+.color-mode i{
+    font-size: 2.5rem;
+    color: var(--bg-color);
 }
 .main-content{
     /* border: 1px solid green; */
@@ -75,9 +74,10 @@ form{
     padding: 12px 20px;
     border-radius: 3px;
     width: 25rem;
+    box-shadow: 0 0px 8px -4px rgb(29, 29, 29);
+
 }
 input{
-    /* border: 2px solid yellow; */
     color: var(--font-color);
     border:none;
     background-color: var(--content-color);
@@ -88,9 +88,7 @@ input{
     outline: none;
 }
 input::placeholder{
-    /* padding-left: 10px; */
-    color: var(--font-color);
-    opacity: 0.6;
+    opacity: 0.9;
 }
 #continents{
     /* border: 2px solid red; */
@@ -102,6 +100,8 @@ input::placeholder{
     display: flex;
     flex-direction: row;
     border-radius: 3px;
+    box-shadow: 0 0px 8px -4px rgb(29, 29, 29);
+
 }
 i:hover {
     cursor: pointer;
@@ -143,7 +143,7 @@ i:hover {
     cursor: pointer;
 }
 .country-data:hover{
-    box-shadow: 0 4px 8px -2px black;
+    box-shadow: 0 6px 6px -2px black;
 }
 .flag-img{
     /* border: 2px solid yellow; */
@@ -164,7 +164,6 @@ i:hover {
 span{
     color: var(--hover-n-span)
 }
-
 .display-toggle{
     display: block;
 }
