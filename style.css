@@ -18,7 +18,6 @@
 }
 body{
     width: 100vw;
-    height: auto;
     color: var(--font-color);
     background-color: var(--bg-color);
 }
