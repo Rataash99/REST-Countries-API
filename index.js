@@ -104,7 +104,6 @@ function country_information(res,country_data){
     }    
 }
     let country_data = document.getElementsByClassName('country-data');
-    console.log(country_data)
     fetch(url)
         .then(response => response.json())
         .then(res => {
