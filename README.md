@@ -4,17 +4,10 @@
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -30,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Rataash99/REST-Countries-API)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github link](https://github.com/Rataash99/REST-Countries-API)
+- Live Site URL: [hosted here](https://splendorous-pithivier-81902b.netlify.app/)
 
 ### Built with
 
@@ -41,27 +34,12 @@ Users should be able to:
 - JavaScript
 - [Styled Components](https://fontawesome.com) - For styles
 
-
 ### What I learned
 
 - Working of API
 - Object Prototypes
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
 ### Useful resources
 
-- [Example resource 1](https://www.fontawesome.com) - This helped me for choosing icons. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://fonts.google.com) - This is an amazing website which helped me select whatever the font i've needed.
+- [Resource 1](https://www.fontawesome.com) - This helped me for choosing icons. I really liked this pattern and will use it going forward.
+- [Resource 2](https://fonts.google.com) - This is an amazing website which helped me select whatever the font i've needed.
