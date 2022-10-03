@@ -40,14 +40,13 @@ h2{
 }
 .color-mode i{
     font-size: 2.5rem;
-    color: var(--bg-color);
+    color: hsl(255, 50%, 17%);
 }
 .main-content{
     /* border: 1px solid green; */
     width:100vw;
     padding: 1.8rem 3rem;
     display: flex;
-    /* display: none; */
     flex-direction: column;
 }
 .search_N_filter{
@@ -61,9 +60,7 @@ h2{
     position: relative;
 }
 .searchbar i{
-    /* border: 2px solid red; */
     position: absolute;
-    /* top: 3.05rem; */
     margin: 14px 22px;
 }
 form{
@@ -103,14 +100,14 @@ input::placeholder{
     box-shadow: 0 0px 8px -4px rgb(29, 29, 29);
 
 }
-i:hover {
+#continents i{
     cursor: pointer;
 }
 .all-continent{
     /* border: 1px solid yellow; */
     background-color: var(--content-color);
     position: absolute;
-    margin-top: 15rem;
+    margin-top: 14.6rem;
     border-radius: 3px;
     width: 12rem;
     padding: 9px;

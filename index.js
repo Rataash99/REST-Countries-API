@@ -226,4 +226,3 @@ function clear_child(class_name) {
 dropdown.addEventListener('click', () => {
     all_continent.classList.toggle('display-toggle')
 })
-
