@@ -24,7 +24,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github link](https://github.com/Rataash99/REST-Countries-API)
-- Live Site URL: [hosted here](https://splendorous-pithivier-81902b.netlify.app/)
+- Live Site URL: [hosted here](https://visionary-piroshki-40ed6c.netlify.app/)
 
 ### Built with
 
