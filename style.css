@@ -16,12 +16,14 @@
     --font-color: white;
     --hover-n-span: rgb(159, 158, 158);
 }
+
 body{
     width: 100vw;
     height: 100vh;
     color: var(--font-color);
     background-color: var(--bg-color);
 }
+
 h2{
     font-size: 1.1rem;
 }
@@ -40,7 +42,7 @@ h2{
 }
 .color-mode i{
     font-size: 2.5rem;
-    color: hsl(255, 50%, 17%);
+    color: #211641;
 }
 .main-content{
     /* border: 1px solid green; */
