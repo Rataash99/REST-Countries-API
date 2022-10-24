@@ -22,8 +22,10 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github link](https://github.com/Rataash99/REST-Countries-API)
-- Live Site URL: [hosted here](https://visionary-piroshki-40ed6c.netlify.app/)
+- Solution URL: [Github link](https://github.com/Rataash99/ToDo-App)
+- Live Site URL: [hosted here](https://spiffy-squirrel-832854.netlify.app)
+
+)
 
 ### Built with
 
@@ -35,8 +37,8 @@ Users should be able to:
 
 ### What I learned
 
-- Working of API
-- Object Prototypes
+- JS concepts
+- Dom Manipulation
 
 ### Useful resources
 
