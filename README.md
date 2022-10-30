@@ -1,5 +1,6 @@
 # REST Countries API 
 
+# I would like to thank Frontendmentor for providing us with such good projects
 ## Table of contents
 
 - [Overview](#overview)
