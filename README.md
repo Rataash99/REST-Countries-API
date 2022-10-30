@@ -1,6 +1,8 @@
 # REST Countries API 
 
-# I would like to thank Frontendmentor for providing us with such good projects
+# I would like to thank ```frontendmentor``` for providing us with such good projects
+Please do check out challenges on [frontendmentor](https://www.frontendmentor.io/challenges)
+
 ## Table of contents
 
 - [Overview](#overview)
