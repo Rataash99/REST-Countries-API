@@ -80,12 +80,14 @@ function remove_show(ele) {
     main_content.classList.toggle('display-remove');
 }
 function append_to_list(ele) {
+    const value = ele.population.toString().replace(/[^0-9]/g, 's');
+    const formattedValue = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     let div = document.createElement('div')
     div.classList.add('country-data');
 
     div.innerHTML = `<img class = 'flag-img' src=${ele.flag} alt="">
     <h3 class="country-flag">${ele.name}</h3>
-    <p >Population: <span class="population">${ele.population}</span></p>
+    <p >Population: <span class="population">${formattedValue}</span></p>
     <p >Region: <span class="region">${ele.region}</span></p>
     <p >Capital: <span class="capital">${ele.capital}</span></p>`
 
