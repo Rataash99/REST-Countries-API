@@ -19,7 +19,8 @@ let continents = document.querySelector('#continents');
 let p_data = document.getElementsByClassName('p-data')[0];
 
 function info_of_particular_country(item) {
-
+    const value = item.population.toString().replace(/[^0-9]/g, 's');
+    const formattedValue = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     main_content.classList.toggle('display-remove');
     let info_container = document.createElement('div');
     info_container.classList.add = 'info-of-country';
@@ -47,7 +48,7 @@ function info_of_particular_country(item) {
     <div class="particular-country-data">
     <div class = 'left-data'>
     <p>Native Name: <span class = "native-name">${item.nativeName}</span></p>
-                <p>Population: <span class="particular-country-population">${item.population}</span></p>
+                <p>Population: <span class="particular-country-population">${formattedValue}</span></p>
                 <p>Region: <span class="particular-country-region">${item.region}</span></p>
                 <p>Sub Region: <span class="sub-region">${item.subregion}</span></p>
                 <p>Capital: <span class="particular-country-capital">${item.capital}</span></p>
